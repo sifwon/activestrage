@@ -1,0 +1,10 @@
+    <%= link_to "記事一覧へ戻る",articles_path %>
+    <%= form_for @article  do |f| %>
+
+        <% #titleはデータベースと関係している %>
+        <%= f.text_field :title ,:size => "40" %> <br>
+        <% #textと言うデータベースのカラム名 %>
+        <%= f.text_area :text %> <br>
+        <% #submitは入力されたデータを引き連れてformタグに指定したページへ飛ぶためのボタン %>
+        <%= f.submit %>
+    <% end %>

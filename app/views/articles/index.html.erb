@@ -1,0 +1,15 @@
+<h1>記事一覧</h1>
+<%= link_to "記事の作成",new_article_path %> <br>
+<%= image_tag "nekos.jpg",height: 300 ,width: 500 %> <br>
+<% @articles.each do |article| %>
+    <% #.each doとendの時は%=を書かない %>
+    <% #本文は%=をつける %>
+    <% #article_path()と書いてあげることでオブジェクトを渡してあげる articleを一つ一つ取り出してarticleと言う変数に渡してあげる %>
+    <h2><%= link_to article.title, article_path(article)%></h2>
+    <p><%= article.text %></p>
+    <% #edit_article_path()の横のかっこはスペースを空けないこと %>
+    <%= link_to "編集する",edit_article_path(article) %> 
+    <%= link_to "削除する",article_path(article),method: :delete,data: {confirm: "削除してよろしいでしょうか?"} %> <br>
+<% end %>
+<% #link_to rinkは間違い %>
+<%= link_to "トップに戻る", root_path %>
