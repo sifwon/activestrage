@@ -1,8 +1,10 @@
 class ArticlesController < ApplicationController
     #only onryと書かないように
     before_action :set_article ,only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!
     def index
-        @articles = Article.all
+        #@articles = Article.all
+        @articles = current_user.articles
     end
     def show
         
@@ -11,7 +13,6 @@ class ArticlesController < ApplicationController
         @article = Article.new
     end
     def edit
-        
     end
     def create
         #paramsは送られてきた値を受け取るためのメソッド 送られてくる情報は主に、getのクエリパラメータとPostでformを使って送信されるデータの2つ
@@ -19,6 +20,7 @@ class ArticlesController < ApplicationController
             #raise params.inspect
         #paramsのアーティクルの中からモデル(Article.new)を作りそれをインスタンス変数(@article)に入れる そしてそれを保存
         @article=Article.new(article_params)
+        @article.user = current_user
         #データベースに保存
         if @article.save
             #保存されたあとどこに行くか

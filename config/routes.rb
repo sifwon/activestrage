@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #resoucesメソッドはrailsで定義されている7つのアクションのルーティングを自動で生成するメソッド resousesメソッドを使うことで簡単にルーティングを作成することができる
   #resources :コントローラー名

@@ -11,13 +11,18 @@
 
   <body>
     <div id="wrapper">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <div id=header>
         <strong>RailsBlog</strong>
         <hr>
       </div>
       <div id="content">
       <%= yield %>
-      </div>
+      </div><br>
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+      <% end %>
     </div>
       
   </body>
