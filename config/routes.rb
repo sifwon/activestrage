@@ -13,3 +13,4 @@ Rails.application.routes.draw do
   #それ以外は / で区切る
   root 'top#index'
 end
+
