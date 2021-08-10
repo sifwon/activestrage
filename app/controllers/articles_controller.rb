@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     end 
     def article_params
         #articleと言うパラメーターの中のtitle,textは保存していいですよと言う意味
-        params.require(:article).permit(:title, :text)
+        params.require(:article).permit(:title, :text,:image)
     end
     def set_article
         #Articalモデルの中で見つけてくる 

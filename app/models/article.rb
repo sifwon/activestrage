@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
+    has_one_attached :image
     belongs_to :user
     #prisenceはオブジェクトが存在すればオブジェクトを返し、オブジェクトが存在しなければnilを返す 
     #validatesはオブジェクトがDBに保存される前にそのデータが正しいかどうかを検証する仕組み 

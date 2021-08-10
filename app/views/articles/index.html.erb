@@ -5,6 +5,12 @@
     <% #.each doとendの時は%=を書かない %>
     <% #本文は%=をつける %>
     <% #article_path()と書いてあげることでオブジェクトを渡してあげる articleを一つ一つ取り出してarticleと言う変数に渡してあげる %>
+    
+    <%# activestrage %>
+    <% if @comment.image.attached? %>
+        <%= image_tag @article.image %>
+    <% end %>
+
     <h2><%= link_to article.title, article_path(article)%></h2>
     <p><%= article.text %></p>
     <% #edit_article_path()の横のかっこはスペースを空けないこと %>
