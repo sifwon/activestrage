@@ -2,7 +2,7 @@
     <%= form_for @article  do |f| %>
 
         <% #titleはデータベースと関係している %>
-        <%= f.file_field :image ,id: "blog" %><br>
+        <%= f.file_field :image %><br>
         <%= f.text_field :title ,:size => "49" %> <br>
         <% #textと言うデータベースのカラム名 %>
         <%= f.text_area :text %> <br>

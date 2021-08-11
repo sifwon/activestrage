@@ -8,7 +8,7 @@
     
     <%# activestrage %>
     <% if article.image.attached? %>
-        <%= image_tag article.image %>
+        <%= image_tag article.image,class: "blog_img" %>
     <% end %>
 
     <h2><%= link_to article.title, article_path(article)%></h2>

@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ *{
+     max-width: 100%;
+ }
 body{
     background-image: url("kabegami.jpg");
     text-align:center;
@@ -33,6 +36,8 @@ body{
     /* display:inline-blockで文字を中央揃えにできる; */
     display:inline-block;
 }
-#blog img{
+.blog_img {
     max-width: 100%;
+    width:80%;
+    height:40%;
 }
