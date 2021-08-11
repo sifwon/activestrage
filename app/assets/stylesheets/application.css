@@ -33,3 +33,6 @@ body{
     /* display:inline-blockで文字を中央揃えにできる; */
     display:inline-block;
 }
+#blog img{
+    max-width: 100%;
+}

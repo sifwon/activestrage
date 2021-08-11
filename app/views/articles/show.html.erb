@@ -1,3 +1,6 @@
 <h1> <%= @article.title %> </h1>
+<% if @article.image.attached? %>
+    <%= image_tag @article.image %>
+<% end %>
 <p> <%= @article.text %> </p>
 <%= link_to "記事一覧に戻る",articles_path %>

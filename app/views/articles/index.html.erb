@@ -7,8 +7,8 @@
     <% #article_path()と書いてあげることでオブジェクトを渡してあげる articleを一つ一つ取り出してarticleと言う変数に渡してあげる %>
     
     <%# activestrage %>
-    <% if @comment.image.attached? %>
-        <%= image_tag @article.image %>
+    <% if article.image.attached? %>
+        <%= image_tag article.image %>
     <% end %>
 
     <h2><%= link_to article.title, article_path(article)%></h2>
