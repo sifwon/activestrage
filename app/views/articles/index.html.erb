@@ -1,6 +1,6 @@
 <h1>記事一覧</h1>
 <%= link_to "記事の作成",new_article_path %> <br>
-<%= image_tag "nekos.jpg",height: 300 ,width: 500 %> <br>
+<%#= image_tag "nekos.jpg",height: 300 ,width: 500 %> <br>
 <% @articles.each do |article| %>
     <% #.each doとendの時は%=を書かない %>
     <% #本文は%=をつける %>
